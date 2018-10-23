@@ -1,0 +1,25 @@
+<ion-content padding>
+  <app-page-header1 (eventPressed)="Logout()" [b1label]="'Logout'"></app-page-header1>
+
+  <ion-card style="background-image:url('assets/img/road.jpeg')">
+    <ion-card-content >
+      <h1 style="color:white; margin:20px 0px 20px 0px">Welcome</h1>
+      <h2 style="color:orange; margin-bottom:30px;">{{gser.username}}</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list style="margin-top:30px;">
+    <ion-row>
+      <ion-col>
+          <button ion-button outline icon-start style="width:100%; height:80px;" (click)="ViewContacts()">
+            <ion-icon name="contacts" style="zoom:2.2;" ></ion-icon>Contacts</button>        
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <button ion-button outline icon-start style="width:100%; height:80px;" (click)="ViewRequest()">
+                <ion-icon name="mail" style="zoom:2.2;" ></ion-icon>Requests</button>
+        </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>

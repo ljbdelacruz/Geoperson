@@ -1,0 +1,19 @@
+<ion-content padding>
+  <app-page-header1 (eventPressed)="Back()" [b1label]="'Back'"></app-page-header1>
+  <ion-searchbar (ionInput)="getItems($event)" style="margin-top:10px; "></ion-searchbar>
+  <ion-list style="padding-top:5px; " *ngIf="myList.length > 0 ? true:false">
+    <ion-item *ngFor="let item of myList" style="border:1px solid #DCDCDC; border-radius:5px; margin-bottom:5px;">
+      {{item.Name}}
+      <!-- <button ion-button outline item-end icon-left (click)="AcceptRequest(item)">
+          <ion-icon name="checkmark-circle"></ion-icon>
+      </button> -->
+      <button ion-button large clear item-end icon-left (click)="MyAcceptRequest(item)">
+        <ion-icon name="md-checkmark"></ion-icon>
+    </button>
+      <button ion-button large clear item-end icon-left (click)="MyDeleteRequest(item)">
+        <ion-icon name="trash"></ion-icon>
+    </button>
+    </ion-item>
+  </ion-list>
+  <h1 *ngIf="myList.length ==0? true:false">-No Request-</h1>
+</ion-content>

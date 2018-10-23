@@ -1,0 +1,8 @@
+<div style="width:100%; height:50px;">
+    <button ion-button clear icon-start (click)="buttonPressed()" color="default">
+        <ion-icon name="arrow-back" style="zoom:1.5;"></ion-icon>{{b1label}}</button>
+
+    <button ion-button clear *ngIf="isShowHelp" style="float:right;" color="secondary">
+        <ion-icon name="help-circle" style="zoom:2.0;" (click)="buttonHelpPressed()"></ion-icon>
+    </button>
+</div>
